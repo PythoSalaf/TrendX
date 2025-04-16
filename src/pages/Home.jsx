@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import { Modal } from "../components";
 import { Cloud, Metamask } from "../assets";
 import { Chat } from "../components";
@@ -22,10 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bee-Assist | Home</title>
-      </Helmet>
-
+     
       {!walletConnected ? (
         <div className="w-full h-[88vh] flex items-center justify-center flex-col">
           <div className="w-full border py-2 border-gray-400 rounded-xl">
@@ -33,7 +29,7 @@ const Home = () => {
               <h2 className="text-[#27343C] py-2 text-center text-2xl md:text-3xl font-semibold">
                 Welcome to TrendX.ai
               </h2>
-              <p className="py-2 text-base md:text-lg">
+              <p className="py-2 text-base text-center md:text-lg">
                 I'm BEE, your dedicated crypto AI buddy made to examine Twitter
                 data. Driven by sophisticated language models, I assist you in
                 making wise cryptocurrency market judgments through social media
