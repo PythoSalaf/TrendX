@@ -69,15 +69,15 @@ const Chat = () => {
       </div>
 
       {/* Fixed Input Area */}
-      <div className="sticky bottom-0 bg-[#F7D2BA80] py-3 rounded-4xl">
+      <div className="sticky bottom-10 bg-[#F7D2BA80] py-3 rounded-4xl">
         <div className="relative w-full">
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-            placeholder="Type a message..."
-            className="w-full pr-10 px-4 py-2 focus:outline-none focus:ring-0"
+            placeholder="Ask anything on crypto trend and analysis on X............."
+            className="w-full pr-10 px-4 py-2 text-[#030F3966] focus:outline-none focus:ring-0"
           />
           <button
             onClick={sendMessage}
