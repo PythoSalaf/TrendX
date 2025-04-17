@@ -59,9 +59,9 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-full mx-auto bg-transparent px-4">
+    <div className="flex flex-col min-h-screen w-full mx-auto bg-transparent px-4">
       {/* Chat Messages */}
-      <div className="flex-1 overflow-y-auto pr-1 py-4">
+      <div className="  py-4">
         {messages.map((msg, index) => (
           <MessageBubble key={index} text={msg.text} isUser={msg.isUser} />
         ))}
@@ -69,7 +69,7 @@ const Chat = () => {
       </div>
 
       {/* Fixed Input Area */}
-      <div className="sticky bottom-10 bg-[#F7D2BA80] py-3 rounded-4xl">
+      <div className="sticky bottom-5 bg-[#F7D2BA80] z-20 px-3  shadow py-1 md:py-3 rounded-4xl">
         <div className="relative w-full">
           <input
             type="text"
@@ -81,9 +81,9 @@ const Chat = () => {
           />
           <button
             onClick={sendMessage}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-[#FD6708]  transition"
+            className="absolute right-2 top-1/2 text-2xl md:text-3xl cursor-pointer -translate-y-1/2 text-[#FD6708]  transition"
           >
-            <IoMdSend size={20} />
+            <IoMdSend />
           </button>
         </div>
       </div>

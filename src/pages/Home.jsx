@@ -21,11 +21,10 @@ const Home = () => {
 
   return (
     <>
-     
       {!walletConnected ? (
         <div className="w-full h-[88vh] flex items-center justify-center flex-col">
           <div className="w-full border py-2 border-gray-400 rounded-xl">
-          <div className="w-[95%] mx-auto">
+            <div className="w-[95%] mx-auto">
               <h2 className="text-[#27343C] py-2 text-center text-2xl md:text-3xl font-semibold">
                 Welcome to TrendX.ai
               </h2>
@@ -107,7 +106,9 @@ const Home = () => {
           </Modal>
         </div>
       ) : (
-        <Chat />
+        <div className="w-full min-h-screen">
+          <Chat />
+        </div>
       )}
     </>
   );
